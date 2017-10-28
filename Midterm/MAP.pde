@@ -18,11 +18,11 @@ class Map {
     this.by= by;
     map.resize(1600, 1200);
     airplane.resize(100, 100);
+    curX = ax-70;
+    curY = ay-50;
   }
 
   void display() {
-    curX= ax;
-    curY= ay;
     image(map, 0, 0);
     stroke(0);
     strokeWeight(5);
@@ -31,14 +31,13 @@ class Map {
     ellipse(bx, by, 10, 10);
     stroke(#1B95DF);
     strokeWeight(10);
-    line(ax, ay, bx, by);      
-    for (float time=0; time<10; time++) {
-      curX=(ax-70)+(bx-ax)/time;
-      curY=(ay-50)+(by-ay)/time;
-    }
-    image(airplane, curX,curY);
-   // image(airplane, ax-70, ay-50); 
-   // image(airplane, bx-20, by-40);
+    line(ax, ay, bx, by);
+    //move airplane
+    if (curX != bx)
+    curX += ((bx-70)-curX)/70;
+    if (curY != by)
+    curY += ((by-50)-curY)/70;
+    image(airplane, curX, curY); 
   }
 
 

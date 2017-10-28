@@ -12,12 +12,12 @@ void setup() {
   tickets[4]= new Tickets(40, 750, "SHANGHAI", "AUSTRALIA", "1");
   tickets[5]= new Tickets(760, 750, "LOS ANGELAS", "SHANGHAI", "1");
   //create six maps accordingly 
-  map[0] = new Map(1186, 320, 496, 402);
-  map[1] = new Map(475, 527, 496, 402);
-  map[2] = new Map(490, 540, 496, 402);
-  map[3] = new Map(1186,320,1235,613);
-  map[4] = new Map(1186,320,1340,777);
-  map[5] = new Map(1186,320,300,450);
+  map[0] = new Map(1246, 420, 496, 402);
+  map[1] = new Map(496, 402, 475, 527);
+  map[2] = new Map(496, 402, 490, 540);
+  map[3] = new Map(1246, 420, 1235, 613);
+  map[4] = new Map(1246, 420, 1340, 777);
+  map[5] = new Map(300, 450, 1246, 420);
 }
 
 void draw() {
@@ -41,13 +41,13 @@ void draw() {
       map[0].display();
     } else if ((mouseX>760&&mouseX<1420)&&(mouseY>150&&mouseY<350)) {
       map[1].display();
-    }else if((mouseX>40&&mouseX<600)&&(mouseY>460&&mouseY<660)){
+    } else if ((mouseX>40&&mouseX<600)&&(mouseY>460&&mouseY<660)) {
       map[2].display();
-    }else if((mouseX>760&&mouseX<1420)&&(mouseY>460&&mouseY<660)){
+    } else if ((mouseX>760&&mouseX<1420)&&(mouseY>460&&mouseY<660)) {
       map[3].display();
-    }else if((mouseX>40&&mouseX<600)&&(mouseY>750&&mouseY<950)){
+    } else if ((mouseX>40&&mouseX<600)&&(mouseY>750&&mouseY<950)) {
       map[4].display();
-    }else if((mouseX>760&&mouseX<1420)&&(mouseY>750&&mouseY<950)){
+    } else if ((mouseX>760&&mouseX<1420)&&(mouseY>750&&mouseY<950)) {
       map[5].display();
     }
   }
